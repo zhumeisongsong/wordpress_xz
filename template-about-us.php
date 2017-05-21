@@ -4,14 +4,16 @@ get_header(); ?>
 <main role="main">
 
   <header class="list-header">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/header-list.jpg" alt="header-img">
-    <p class="header-text">关于我们</p>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/header-us.jpg" alt="header-img">
+    <div class="container hidden-xs">
+      <p>关于我们</p>
+    </div>
   </header>
 
   <section class="list-con container">
 
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-stacked col-xs-3" role="tablist">
+    <ul class="nav nav-tabs nav-stacked col-xs-3 hidden-xs" role="tablist">
       <li role="presentation" class="active">
         <a href="#about_company" aria-controls="home" role="tab" data-toggle="tab">公司概况</a>
       </li>

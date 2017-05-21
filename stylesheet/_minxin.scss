@@ -1,33 +1,38 @@
 @mixin img-text-con($width) {
   .text-con {
     position: absolute;
-    left: $width+15px+10px;
+    left: $width+5px+10px;
     top: 0;
-    right: 15px;
+    right: 0;
     height: 100%;
-    &:hover {
-      color: map-get($global-color,f);
-    }
     @extend %title-excerpt;
   }
 }
 
-@mixin img-con($width) {
-  .img-con {
-    position: absolute;
-    left: 15px;
-    top: 0;
-    width: $width;
-    img {
-      width: 100%;
-    }
+@mixin img-con($width:0,$padding:0)
+{
+.img-con {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  bottom: 5px;
+  width: $width;
+  max-height: $padding;
+  overflow: hidden;
+  img {
+    width: 100%;
   }
 }
 
+}
+
 @mixin item-cell($padding) {
-  height: 0;
-  padding-top: $padding;
   position: relative;
-  margin-bottom: 5px;
+  height: 0;
+  padding: $padding 0 0 0 ;
   overflow: hidden;
+  &:hover {
+    color: map-get($global-color, f);
+    background-color: map-get($global-color, e);
+  }
 }

@@ -1,12 +1,12 @@
 .list-header {
   width: 100%;
   position: relative;
-  p {
-    position: absolute;
-    top: 80%;
-    right: 20%;
+  text-align: right;
+  .container {
+    margin-top: -50px;
+    text-align: right;
+    font-size: 22px;
     color: #fff;
-    font-size: 18px;
   }
 }
 
@@ -16,8 +16,11 @@
     padding-left: 0;
     background-color: transparent;
   }
-  .text-con {
-    color: map-get($global-color, d);
+  .tab-pane {
+    margin-bottom: 50px;
+    .text-con {
+      color: map-get($global-color, d);
+    }
   }
 }
 

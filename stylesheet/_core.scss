@@ -7,7 +7,7 @@ $global-color: (
   f:#39C,
   g:#e1e1e1,
 );
-$footer-height: 155px;
+$footer-height: 90px;
 
 html {
   width: 100%;
@@ -54,6 +54,12 @@ h4 {
   margin: 0;
 }
 
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .no-padding {
   padding: 0;
 }
@@ -66,11 +72,7 @@ h4 {
   padding-right: 0;
 }
 
-.no-margin {
+.no-margin-lr {
   margin-left: 0;
   margin-right: 0;
-}
-
-.bg-color {
-  background-color: #f5f5f5;
 }

@@ -5,7 +5,9 @@ get_header(); ?>
 
   <header class="list-header">
     <img src="<?php echo get_template_directory_uri(); ?>/img/header-list.jpg" alt="header-img">
-    <p class="header-text">党建与企业文化</p>
+    <div class="container hidden-xs">
+      <p>党建与企业文化</p>
+    </div>
   </header>
 
   <section class="list-con container">

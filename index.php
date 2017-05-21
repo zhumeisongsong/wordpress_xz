@@ -31,6 +31,7 @@
   <!--news&notices-->
   <section class="container">
     <div class="row">
+
       <section class="news-con col-sm-7">
         <header class="row title-con">
           <h4 class="col-xs-9 no-padding-l">
@@ -41,7 +42,7 @@
           </div>
         </header>
 
-        <div class="row">
+        <div class="row no-margin-lr">
             <?php
             $args = array(
                 'post_type' => 'news',
@@ -83,16 +84,16 @@
           </h4>
 
           <div class="a-btn col-xs-3 no-padding-r">
-            <a href="<?php echo home_url(); ?>/index.php/notices">更多>></a>
+            <a href="<?php echo home_url(); ?>/index.php/news?type==notices">更多>></a>
           </div>
         </header>
 
-        <div class="row">
+        <div class="row no-margin-lr">
 
             <?php
             $args = array(
                 'post_type' => 'notices',
-                'showposts' => '10',
+                'showposts' => '9',
             );
             $loop = new WP_Query($args);
             while ($loop->have_posts()):
@@ -100,17 +101,14 @@
 
                 ?>
               <a href="<?php the_permalink() ?>" class="col-xs-12 item-cell"> 
-                <div class="text-con">
-                  <div class="title-text"><span>[公告]</span><?php the_title(); ?> </div>
-                </div>
+                [公告]<?php the_title(); ?>
               </a> 
                 <?php
-
             endwhile;
             wp_reset_query();
             ?>
-        </div>
 
+        </div>
       </section>
 
     </div>
@@ -124,7 +122,7 @@
       </h4>
 
       <div class="a-btn col-xs-3 no-padding-r">
-        <a href="<?php echo home_url(); ?>/index.php/?page_id=10">更多>></a>
+        <a href="<?php echo home_url(); ?>/index.php/cases?type=prodctions">更多>></a>
       </div>
     </header>
   </section>
@@ -137,7 +135,7 @@
       </h4>
 
       <div class="a-btn col-xs-3 no-padding-r">
-        <a href="<?php echo home_url(); ?>/index.php/?page_id=10">更多>></a>
+        <a href="<?php echo home_url(); ?>/index.php/cases">更多>></a>
       </div>
     </header>
 
@@ -178,14 +176,14 @@
   </div>
 
   <!--partner-->
-  <section class="container">
+  <section class="container partner-con">
     <header class="row title-con">
       <h4 class="col-xs-12 no-padding">
         <span class="border-bottom">合作伙伴<span>partners</span></span>
       </h4>
     </header>
 
-    <section class="row partner-con">
+    <section class="row">
       <div class="col-sm-12 item-con">
 
           <?php
@@ -213,18 +211,15 @@
 
   </section>
 
-  <!--info -->
-  <section class="container-fluid no-padding">
+  <!--code-->
+  <section class="container-fluid code-con">
     <div class="row">
-      <div class="col-xs-12">
-        <div class="info-con">
-          <div class="text">
-            网上天路 购通世界<br>
-            以诚为本 用心服务
-          </div>
-        </div>
+      <div class="col-xs-12 img-con">
+        <p>立即扫码关注微信公众号</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/code.jpg" alt="code">
       </div>
     </div>
+
   </section>
 </main>
 <?php get_footer(); ?>

@@ -1,26 +1,13 @@
 /*title*/
-.title-con {
-  margin: 20px 0 15px 0;
-  padding-bottom: 5px;
-  border-bottom: 1px solid map-get($global-color, g);
-  line-height: 1;
-  .border-bottom {
-    padding-bottom: 5px;
-    border-bottom: 1px solid map-get($global-color, f);
-  }
-  .a-btn {
-    text-align: right;
-    a {
-      border-radius: 3px;
-      font-size: 12px;
-      &:hover {
-        text-decoration: none;
-        color: map-get($global-color, a);
-      }
-    }
-  }
+%line-clamp {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  word-break: break-all;
 }
-
 
 %text-con {
   .text-con {
@@ -33,22 +20,16 @@
 
 %title-excerpt {
   .title-text {
-    margin-top: 5px;
+    margin-top: 10px;
     font-weight: 400;
     color: map-get($global-color, b);
   }
 
   .excerpt-text {
-    display: -webkit-box;
     margin-top: 5px;
     padding-right: 10px;
     font-size: 12px;
     color: map-get($global-color, c);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    word-break: break-all;
+    @extend %line-clamp;
   }
 }
