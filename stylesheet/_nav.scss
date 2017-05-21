@@ -1,0 +1,35 @@
+/*nav*/
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 99;
+  background: none;
+  .navbar-brand {
+    width: 9em;
+    padding-top: 0.5em;
+    &:hover {
+      background: none !important;
+    }
+  }
+  button {
+    i {
+      color: #fff;
+    }
+  }
+  a {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    &:hover {
+      color: map-get($global-color, d);
+    }
+    i {
+      font-size: 12px;
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+}

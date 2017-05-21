@@ -1,0 +1,47 @@
+.list-header {
+  width: 100%;
+  position: relative;
+  p {
+    position: absolute;
+    top: 80%;
+    right: 20%;
+    color: #fff;
+    font-size: 18px;
+  }
+}
+
+.list-con {
+  margin-top: 30px;
+  .breadcrumb {
+    padding-left: 0;
+    background-color: transparent;
+  }
+  .text-con {
+    color: map-get($global-color, d);
+  }
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs > li > a {
+  border: none;
+  border-left: 5px solid transparent;
+  color: map-get($global-color, b);
+}
+
+.nav-tabs > li > a:hover {
+  border-radius: 0;
+  border-left: 5px solid map-get($global-color, a);
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  border: none;
+  border-radius: 0;
+  color: map-get($global-color, a);
+  background-color: map-get($global-color, g);
+  border-left: 5px solid map-get($global-color, a);
+}

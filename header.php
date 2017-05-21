@@ -14,21 +14,14 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheet/style.css">
 
     <?php wp_head(); ?>
-  <script>
-      // conditionizr.com
-      // configure environment tests
-      //      conditionizr.config({
-      //          assets: '<?php //echo get_template_directory_uri(); ?>//',
-      //          tests: {}
-      //      });
-  </script>
 </head>
 <body <?php body_class(); ?>>
 
-<nav class="navbar" role="navigation">
-  <div class="container-fluid">
+<nav class="nav-bar" role="navigation">
+  <div class="container no-padding">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse"
+              aria-expanded="false">
         <i class="fa fa-bars"></i>
       </button>
       <a class="navbar-brand" href="<?php echo home_url(); ?>">
@@ -39,22 +32,25 @@
     </div>
 
     <!--right navbar collapse-->
-    <div class="collapse navbar-collapse navbar-main-collapse navbar-right top-menu" id="navbar_collapse">
+    <div class="collapse navbar-collapse navbar-main-collapse navbar-right top-menu no-padding">
       <ul class="nav navbar-nav">
         <li class="active">
           <a href="<?php echo home_url(); ?>">首页</a>
         </li>
         <li>
-          <a href="<?php echo home_url(); ?>/?page_id=10">新闻</a>
+          <a href="<?php echo home_url(); ?>/about_us">关于我们</a>
         </li>
         <li>
-          <a href="<?php echo home_url();  ?>#service">业务范围</a>
+          <a href="<?php echo home_url(); ?>/cases">产品与案例</a>
         </li>
         <li>
-          <a href="<?php echo home_url(); ?>#about">关于我们</a>
+          <a href="<?php echo home_url(); ?>/news">资讯中心</a>
         </li>
         <li>
-          <a href="<?php echo home_url(); ?>#contact">联系我们</a>
+          <a href="<?php echo home_url(); ?>/culture">党建与企业文化</a>
+        </li>
+        <li>
+          <a href="<?php echo home_url(); ?>/join_us">招贤纳士</a>
         </li>
       </ul>
     </div>

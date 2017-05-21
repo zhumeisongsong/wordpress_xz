@@ -2,182 +2,231 @@
 
 <main role="main">
   <!--swiper-->
-  <section class="container-fluid no-padding swiper-con">
+  <section class="container-fluid fluid-con-con no-padding">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/headerimg-1.jpg" alt="swiper-img">
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/headerimg-2.jpg" alt="swiper-img">
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/headerimg-3.jpg" alt="swiper-img">
-        </div>
+
+          <?php
+          $args = array(
+              'post_type' => 'banner',
+              'showposts' => '5',
+          );
+          $loop = new WP_Query($args);
+          while ($loop->have_posts()):
+              $loop->the_post();
+              ?>
+            <div class="swiper-slide">
+                <?php the_post_thumbnail(); ?>
+            </div>
+              <?php
+          endwhile;
+          wp_reset_query();
+          ?>
+
         <div class="swiper-pagination"></div>
       </div>
-  </section>
-
-  <!--about-->
-  <section class="about-con container" id="about">
-    <div class="row">
-      <header class="col-sm-12 animated con-title">
-        <h3>西藏电子商务有限公司</h3>
-        <div class="line2 line2-works"></div>
-        <p>our company</p>
-      </header>
-
-      <div class="col-sm-3 hidden-xs left-img no-padding">
-        <div class="img-con">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo">
-        </div>
-      </div>
-      <div class="col-sm-9 col-xs-12 text-con">
-
-        <p>西藏电子商务有限公司是西藏地区唯一一家由政府引导、企业参与、高度市场化运作的大型国资背景综合电商平台。
-        </p>
-        <p>公司始终坚持“网上天路·购通世界”的企业使命，以西藏区域电子商务生态系统建设为职能定位，通过互联网连接西藏与世界，突破时空局限，拓宽贸易领域，向全世界展示当代西藏的魅力与活力。
-        </p>
-        <p>
-          公司拟总投资6亿元，利用3-5年实现与市场的二次融合，力争成为国内最具影响力的西藏特色产品交易平台，成为拉动区内企业拓展区外市场的强力引擎，成为向世人展示西藏特色风貌的第一窗口，成为政府了解产业发展、进行宏观调控的数据支撑平台，成为推进西藏产业升级、结构调整的重要载体，成为促进西藏大众创业、万众创新的服务平台。
-        </p>
-
-      </div>
     </div>
-
-
   </section>
 
-  <!--service-->
-  <div class="container-fluid bg-color">
-    <section class="service-con container" id="service">
-      <div class="row">
-        <header class="col-sm-12 animated con-title">
-          <h3>核心业务</h3>
-          <div class="line2 line2-works"></div>
-          <p>our service</p>
+  <!--news&notices-->
+  <section class="container">
+    <div class="row">
+      <section class="news-con col-sm-7">
+        <header class="row title-con">
+          <h4 class="col-xs-9 no-padding-l">
+            <span class="border-bottom">新闻动态<span>news</span></span>
+          </h4>
+          <div class="a-btn col-xs-3 no-padding-r">
+            <a href="<?php echo home_url(); ?>/index.php/news">更多>></a>
+          </div>
         </header>
 
-        <section class="col-sm-12 no-padding">
-          <div class="col-xs-12 col-sm-3 icon-con">
-            <div class="fa fa-shopping-cart icon-cell"></div>
-            <h4 class="text-title">
-              电商运营
-            </h4>
-            <p>
-              旅游+购物，西藏区域特色电商平台
-            </p>
-          </div>
-          <div class="col-xs-12 col-sm-3 icon-con">
-            <div class="fa fa-sellsy icon-cell"></div>
-            <h4 class="text-title">
-              电商服务
-            </h4>
-            <p>
-              依托公司资源，面向西藏自治区的综合电商服务
-            </p>
-          </div>
-          <div class="col-xs-12 col-sm-3 icon-con">
-            <div class="fa fa-exchange icon-cell"></div>
-            <h4 class="text-title">
-              资产电商
-            </h4>
-            <p>
-              通过O2O交易技术，构建“产权交易+淘宝网”的模式
-            </p>
-          </div>
-          <div class="col-xs-12 col-sm-3 icon-con">
-            <div class="fa fa-group icon-cell"></div>
-            <h4 class="text-title">
-              公众服务
-            </h4>
-            <p>
-              投融资平台、CA认证平台、第三方支付等
-            </p>
-          </div>
-          <div class="col-sm-4 col-sm-offset-4 col-xs-12 icon-con">
-            <div class="fa fa-tasks icon-cell"></div>
-            <h4 class="text-title">
-              支撑核心业务的平台+实体
-            </h4>
-            <p>
-              旅游平台、购物平台、第三方平台、大宗交易平台、购物中心、汽车租赁、旅行社、IDC机房、电子商务产业园
-            </p>
-          </div>
-        </section>
-      </div>
+        <div class="row">
+            <?php
+            $args = array(
+                'post_type' => 'news',
+                'showposts' => '3',
+            );
+            $loop = new WP_Query($args);
+            while ($loop->have_posts()):
+                $loop->the_post();
+                ?>
 
-    </section>
-  </div>
+              <a href="<?php the_permalink() ?>" class="col-xs-12 item-cell"> 
+                <div class="img-con">
+                    <?php
+                    if (has_post_thumbnail()) { ?>
+                        <?php the_post_thumbnail(); ?>
+                    <?php } else { ?>
+                      <img src="<?php echo get_template_directory_uri(); ?>/img/new.jpg" alt="cover">
+                    <?php } ?>
+                </div>
 
-  <!--news-->
-  <section class="main-con container">
+                <div class="text-con">
+                  <div class="title-text"><?php the_title(); ?> </div>
+                  <div class="excerpt-text"><?php the_excerpt(); ?></div>
+                </div>
+              </a> 
+                <?php
 
-    <header class="col-sm-12 animated con-title">
-      <h3>最新动态</h3>
-      <div class="line2 line2-works"></div>
-      <p>news</p>
-    </header>
+            endwhile;
+            wp_reset_query();
+            ?>
 
-    <section class="main-wrapper col-sm-12 no-padding" role="complementary">
-      <div class="col-sm-6 hidden-xs no-padding-l">
-        <div class="img-con">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/new.jpg" alt="news-left-img">
         </div>
-      </div>
+      </section>
 
-      <div class="col-sm-6 col-xs-12 no-padding news-list">
-          <?php $post_query = new WP_Query('showposts=10');
-          while ($post_query->have_posts()) : $post_query->the_post();
-              $do_not_duplicate = $post->ID; ?> 
+      <section class="notices-con col-sm-5">
+        <header class="row title-con">
+          <h4 class="col-xs-9 no-padding-l">
+            <span class="border-bottom">公告<span>notices</span></span>
+          </h4>
 
-            <a href="<?php the_permalink() ?>" class="col-xs-12 no-padding"> 
-              <span class="news-title col-xs-8 no-padding-l"><?php the_title(); ?> </span>
-              <span class="news-date col-xs-4 no-padding">[<?php the_time('Y-m-d'); ?>]</span> 
-            </a> 
-          <?php endwhile; ?> 
-      </div>
-    </section>
+          <div class="a-btn col-xs-3 no-padding-r">
+            <a href="<?php echo home_url(); ?>/index.php/notices">更多>></a>
+          </div>
+        </header>
 
-    <div class="a-btn col-xs-12">
-      <a href="<?php echo home_url(); ?>/index.php/?page_id=10">MORE</a>
-    </div>
-  </section>
-  <!--info -->
-  <section class="container-fluid info-con no-padding">
-    <div class="text">
-      网上天路 购通世界<br>以诚为本 用心服务
-    </div>
-  </section>
-  <!--contact-->
-  <section class="contact-con container" id="contact">
-    <div class="row">
+        <div class="row">
 
-      <header class="col-sm-12 animated con-title">
-        <h3>联系我们</h3>
-        <div class="line2 line2-works"></div>
-        <p>contact us</p>
-      </header>
+            <?php
+            $args = array(
+                'post_type' => 'notices',
+                'showposts' => '10',
+            );
+            $loop = new WP_Query($args);
+            while ($loop->have_posts()):
+                $loop->the_post();
 
-      <section class="col-sm-10 col-sm-offset-1 no-padding">
-        <div class="col-sm-4 animated icon-con">
-          <h4><i class="fa fa-phone"></i>联系电话</h4>
-          <p>这里是您的联系电话</p>
+                ?>
+              <a href="<?php the_permalink() ?>" class="col-xs-12 item-cell"> 
+                <div class="text-con">
+                  <div class="title-text"><span>[公告]</span><?php the_title(); ?> </div>
+                </div>
+              </a> 
+                <?php
+
+            endwhile;
+            wp_reset_query();
+            ?>
         </div>
-        <div class="col-sm-4 animated icon-con">
-          <h4><i class="fa fa-map-marker"></i>公司地址</h4>
-          <p>这里是您的公司地址</p>
-        </div>
-        <div class="col-sm-4 animated icon-con email-con">
-          <h4><i class="fa fa-envelope-o"></i>邮箱</h4>
-          <p>这里是您的公司邮箱</p>
-        </div>
+
       </section>
 
     </div>
   </section>
 
-</main>
+  <!--production-->
+  <section class="container">
+    <header class="row title-con">
+      <h4 class="col-xs-9 no-padding-l">
+        <span class="border-bottom">产品中心<span>productions</span></span>
+      </h4>
 
+      <div class="a-btn col-xs-3 no-padding-r">
+        <a href="<?php echo home_url(); ?>/index.php/?page_id=10">更多>></a>
+      </div>
+    </header>
+  </section>
+
+  <!--cases-->
+  <div class="container">
+    <header class="row title-con">
+      <h4 class="col-xs-9 no-padding-l">
+        <span class="border-bottom">成功案例<span>cases</span></span>
+      </h4>
+
+      <div class="a-btn col-xs-3 no-padding-r">
+        <a href="<?php echo home_url(); ?>/index.php/?page_id=10">更多>></a>
+      </div>
+    </header>
+
+    <div class="row case-con">
+        <?php
+        $args = array(
+            'post_type' => 'cases',
+            'showposts' => '2',
+        );
+        $loop = new WP_Query($args);
+        while ($loop->have_posts()):
+            $loop->the_post();
+            ?>
+
+          <a href="<?php the_permalink() ?>" class="col-xs-12 item-cell"> 
+            <div class="col-xs-12 col-sm-4 no-padding">
+                <?php
+                if (has_post_thumbnail()) { ?>
+                    <?php the_post_thumbnail(); ?>
+                <?php } else { ?>
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/case.jpg" alt="cover">
+                <?php } ?>
+            </div>
+
+            <div class="col-xs-12 col-sm-8 no-padding-r text-con">
+              <div class="title-text"><?php the_title(); ?> </div>
+              <div class="excerpt-text"><?php the_excerpt(); ?></div>
+            </div>
+          </a> 
+            <?php
+
+        endwhile;
+        wp_reset_query();
+        ?>
+
+    </div>
+
+  </div>
+
+  <!--partner-->
+  <section class="container">
+    <header class="row title-con">
+      <h4 class="col-xs-12 no-padding">
+        <span class="border-bottom">合作伙伴<span>partners</span></span>
+      </h4>
+    </header>
+
+    <section class="row partner-con">
+      <div class="col-sm-12 item-con">
+
+          <?php
+          $args = array(
+              'post_type' => 'partners',
+          );
+          $loop = new WP_Query($args);
+          while ($loop->have_posts()):
+              $loop->the_post();
+              ?>
+            <div class="col-md-3 col-sm-4 col-xs-6 item-cell">
+              <a href="<?php echo get_post_meta($post->ID, '_link', true) ?>" target="_blank" class="item-cell-link">
+                  <?php the_post_thumbnail(); ?>
+                <div class="hover-con"><span><?php the_title(); ?></span></div>
+              </a>
+            </div>
+
+              <?php
+          endwhile;
+          wp_reset_query();
+          ?>
+
+      </div>
+    </section>
+
+  </section>
+
+  <!--info -->
+  <section class="container-fluid no-padding">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="info-con">
+          <div class="text">
+            网上天路 购通世界<br>
+            以诚为本 用心服务
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 <?php get_footer(); ?>
+
 

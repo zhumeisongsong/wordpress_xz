@@ -1,0 +1,23 @@
+/*
+single
+*/
+.article-con {
+  min-height: 400px;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  .article-title {
+    a {
+      word-break: break-all;
+    }
+  }
+}
+
+.detail-cover {
+  background-color: #1b6d85;
+}
+
+.news-list-con {
+  margin-top: 2em;
+  margin-bottom: 6em;
+  min-height: 400px;
+}

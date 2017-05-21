@@ -1,0 +1,245 @@
+/*
+index
+*/
+/*swiper*/
+.fluid-con {
+  max-width: 1200px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 30vw;
+  overflow: hidden;
+  .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    .swiper-slide {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .text-wapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+/*news*/
+.news-con {
+  .item-cell {
+    @include item-cell(75px);
+    @include img-con(135px);
+    @include img-text-con(135px);
+  }
+}
+
+/*notices*/
+.notices-con {
+  @extend %text-con;
+}
+
+/*production*/
+
+/*case*/
+.case-con {
+  .item-cell{
+    margin-bottom: 25px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .text-con {
+      margin-top: 10px;
+      &:hover {
+        text-decoration: underline;
+      }
+      @extend %title-excerpt;
+    }
+  }
+}
+
+/*partner*/
+.partner-con {
+  margin-bottom: 20px;
+  .item-con {
+    float: left;
+    .item-cell {
+      margin-right: -1px;
+      margin-bottom: -1px;
+      padding: 10px 15px;
+      border: 1px dashed map-get($global-color, g);
+    }
+  }
+  .item-cell-link {
+    display: block;
+    position: relative;
+    .hover-con {
+      display: none;
+      position: absolute;
+      left: -16px;
+      top: -11px;
+      right: -16px;
+      bottom: -11px;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, .7);
+      span {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -10px;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+
+    &:hover {
+      .hover-con {
+        display: block;
+      }
+
+    }
+  }
+}
+
+/*about*/
+//.about-con {
+//  padding-top: 6em;
+//  margin-bottom: 6em;
+//  .con-title {
+//    margin-bottom: 3em;
+//  }
+//  .left-img {
+//    text-align: center;
+//    .img-con {
+//      img {
+//        width: auto;
+//        min-height: 180px;
+//        max-height: 200px;
+//      }
+//    }
+//  }
+//
+//  .text-con {
+//    p {
+//      color: #555;
+//      text-indent: 20px;
+//      text-align: justify;
+//      letter-spacing: 1px;
+//      line-height: 1.6;
+//      font-size: 16px;
+//    }
+//
+//  }
+//}
+//
+//.main-con {
+//  margin-top: 6em;
+//  .main-wrapper {
+//    margin-top: 4em;
+//    .img-con {
+//      width: 100%;
+//      height: 305px;
+//      overflow: hidden;
+//      img {
+//        width: auto;
+//        height: 100%;
+//      }
+//    }
+//  }
+//}
+//
+//.news-list {
+//  line-height: 1;
+//  a {
+//    width: 100%;
+//    height: 100%;
+//    color: #666;
+//    &:hover {
+//      text-decoration: underline !important;
+//      color: map-get($global-color, f);
+//    }
+//    .news-title {
+//      height: 100%;
+//      line-height: 1.2;
+//      overflow: hidden;
+//      display: -webkit-box;
+//      text-overflow: ellipsis;
+//      -webkit-box-orient: vertical;
+//      -webkit-line-clamp: 1;
+//    }
+//    .news-date {
+//      text-align: right;
+//    }
+//  }
+//}
+//
+//.page-navi {
+//  .wp-pagenavi {
+//    text-align: center;
+//    margin-top: 60px;
+//  }
+//}
+//
+//.service-con {
+//  padding-top: 4em;
+//  padding-bottom: 6em;
+//  text-align: center;
+//  background-color: map-get($global-color, e);
+//  .icon-con {
+//    margin-top: 3em;
+//    .icon-cell {
+//      width: 120px;
+//      height: 120px;
+//      line-height: 115px;
+//      font-size: 48px;
+//      border-radius: 50%;
+//      border: 2px solid map-get($global-color, a);
+//      color: map-get($global-color, a);
+//      &:hover {
+//        background-color: map-get($global-color, a);
+//        color: #fff;
+//      }
+//    }
+//    .text-title {
+//      margin-top: 1.5em;
+//      color: map-get($global-color, d);
+//    }
+//    p {
+//      padding: 0;
+//      line-height: 1.6;
+//      color: map-get($global-color, d);
+//    }
+//  }
+//}
+//
+//.advantage-con {
+//  margin-top: 8em;
+//  text-align: center;
+//  .icon-con {
+//    margin-top: 1em;
+//  }
+//}
+//
+//.contact-con {
+//  margin-top: 12em;
+//  margin-bottom: 12em;
+//  .icon-con {
+//    margin-top: 4em;
+//    text-align: center;
+//    h4 {
+//      color: map-get($global-color, d);
+//      margin-bottom: 1em;
+//      i {
+//        font-size: large;
+//        padding-right: 5px;
+//        color: map_get($global-color, a);
+//      }
+//    }
+//  }
+//}

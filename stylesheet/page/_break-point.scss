@@ -1,0 +1,19 @@
+@media (min-width: 415px) {
+  h4 {
+    font-size: 18px;
+  }
+  .title-con{
+    .border-bottom{
+      padding-bottom: 4px;
+    }
+  }
+  .partner-con {
+    .item-cell-link {
+      .hover-con {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@mixin img-text-con($width) {
+  .text-con {
+    position: absolute;
+    left: $width+15px+10px;
+    top: 0;
+    right: 15px;
+    height: 100%;
+    &:hover {
+      color: map-get($global-color,f);
+    }
+    @extend %title-excerpt;
+  }
+}
+
+@mixin img-con($width) {
+  .img-con {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: $width;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@mixin item-cell($padding) {
+  height: 0;
+  padding-top: $padding;
+  position: relative;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
