@@ -125,6 +125,39 @@
         <a href="<?php echo home_url(); ?>/index.php/cases?type=prodctions">更多>></a>
       </div>
     </header>
+
+    <div class="row production-con">
+        <?php
+        $args = array(
+            'post_type' => 'productions',
+            'showposts' => '6',
+        );
+        $loop = new WP_Query($args);
+        while ($loop->have_posts()):
+            $loop->the_post();
+            ?>
+          <article data-href="<?php the_permalink() ?>" class="col-xs-12 col-sm-4"> 
+            <div class="item-cell">
+              <div class="img-con">
+                  <?php
+                  if (has_post_thumbnail()) { ?>
+                      <?php the_post_thumbnail(); ?>
+                  <?php } else { ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-cover.png" alt="cover">
+                  <?php } ?>
+              </div>
+              <div class="text-con">
+                <div class="title-text"><?php the_title(); ?> </div>
+                <div class="excerpt-text"><?php the_excerpt(); ?></div>
+              </div>
+            </div>
+          </article> 
+            <?php
+        endwhile;
+        wp_reset_query();
+        ?>
+
+    </div>
   </section>
 
   <!--cases-->
@@ -139,7 +172,7 @@
       </div>
     </header>
 
-    <div class="row case-con">
+    <div class="row case-con no-margin-lr">
         <?php
         $args = array(
             'post_type' => 'cases',
@@ -151,7 +184,7 @@
             ?>
 
           <a href="<?php the_permalink() ?>" class="col-xs-12 item-cell"> 
-            <div class="col-xs-12 col-sm-4 no-padding">
+            <div class="col-xs-12 col-sm-4 img-con no-padding">
                 <?php
                 if (has_post_thumbnail()) { ?>
                     <?php the_post_thumbnail(); ?>
@@ -160,7 +193,7 @@
                 <?php } ?>
             </div>
 
-            <div class="col-xs-12 col-sm-8 no-padding-r text-con">
+            <div class="col-xs-12 col-sm-8 no-padding text-con">
               <div class="title-text"><?php the_title(); ?> </div>
               <div class="excerpt-text"><?php the_excerpt(); ?></div>
             </div>
