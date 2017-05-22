@@ -136,7 +136,8 @@
         while ($loop->have_posts()):
             $loop->the_post();
             ?>
-          <article data-href="<?php the_permalink() ?>" class="col-xs-12 col-sm-4"> 
+
+          <a class="col-xs-12 col-sm-4 item-con" href="<?php the_permalink() ?>">
             <div class="item-cell">
               <div class="img-con">
                   <?php
@@ -151,7 +152,7 @@
                 <div class="excerpt-text"><?php the_excerpt(); ?></div>
               </div>
             </div>
-          </article> 
+          </a>
             <?php
         endwhile;
         wp_reset_query();

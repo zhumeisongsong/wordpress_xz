@@ -13,17 +13,20 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheet/animate.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheet/style.css">
 
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.3.min.js"></script>
+
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
 <nav class="nav-bar" role="navigation">
   <div class="container no-padding">
-    <div class="navbar-header">
+    <div class="navbar-header no-margin-lr">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse"
               aria-expanded="false">
         <i class="fa fa-bars"></i>
       </button>
+
       <a class="navbar-brand" href="<?php echo home_url(); ?>">
         <div class="img-con">
           <img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="西藏电商">
