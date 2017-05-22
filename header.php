@@ -39,19 +39,19 @@
           <a href="<?php echo home_url(); ?>">首页</a>
         </li>
         <li>
-          <a href="<?php echo home_url(); ?>/about_us">关于我们</a>
+          <a href="<?php echo home_url(); ?>/about_us/">关于我们</a>
         </li>
         <li>
-          <a href="<?php echo home_url(); ?>/cases">产品与案例</a>
+          <a href="<?php echo home_url(); ?>/cases_list/">产品与案例</a>
         </li>
         <li>
-          <a href="<?php echo home_url(); ?>/news">资讯中心</a>
+          <a href="<?php echo home_url(); ?>/news_list/">资讯中心</a>
         </li>
         <li>
-          <a href="<?php echo home_url(); ?>/culture">党建与企业文化</a>
+          <a href="<?php echo home_url(); ?>/culture/">党建与企业文化</a>
         </li>
         <li>
-          <a href="<?php echo home_url(); ?>/join_us">招贤纳士</a>
+          <a href="<?php echo home_url(); ?>/join_us/">招贤纳士</a>
         </li>
       </ul>
     </div>
