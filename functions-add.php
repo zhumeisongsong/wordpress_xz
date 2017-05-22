@@ -6,7 +6,7 @@
 function remove_menus()
 {
     global $menu;
-    $restricted = array(__('Dashboard'), __('Appearance'), __('Posts'), __('Comments'),  __('Tools'));//__('Themes'),
+    $restricted = array(__('Dashboard'),  __('Posts'), __('Comments'),  __('Tools'));//__('Themes'),__('Appearance'),
     end($menu);
     while (prev($menu)) {
         $value = explode(' ', $menu[key($menu)][0]);
