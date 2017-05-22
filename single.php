@@ -12,17 +12,17 @@
           <!-- article -->
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-            <!-- post thumbnail -->
-              <?php if (has_post_thumbnail()) : // Check if Thumbnail exists ?>
-                  <?php the_post_thumbnail(); // Fullsize image for the single post ?>
-              <?php endif; ?>
-            <!-- /post thumbnail -->
-
             <!-- post title -->
             <h1 class="article-title">
               <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
             </h1>
             <!-- /post title -->
+
+            <!-- post thumbnail -->
+              <?php if (has_post_thumbnail()) : // Check if Thumbnail exists ?>
+                  <?php the_post_thumbnail(); // Fullsize image for the single post ?>
+              <?php endif; ?>
+            <!-- /post thumbnail -->
 
             <!-- post details -->
             <span class="date"><?php the_time('Y-j-m'); ?></span>

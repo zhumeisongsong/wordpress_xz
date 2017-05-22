@@ -84,7 +84,7 @@ index
   }
   .item-cell {
     padding: 20px 0 30px 0;
-    background-color: rgba(0, 51, 102, .8);
+    background-color: map-get($global-color,h);
     &:hover{
       background-color:map-get($global-color,f);
 
