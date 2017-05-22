@@ -122,7 +122,7 @@
       </h4>
 
       <div class="a-btn col-xs-3 no-padding-r">
-        <a href="<?php echo home_url(); ?>/index.php/cases?type=prodctions">更多>></a>
+        <a href="<?php echo home_url(); ?>/index.php/cases?type=productions">更多>></a>
       </div>
     </header>
 

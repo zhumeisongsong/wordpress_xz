@@ -13,8 +13,6 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheet/animate.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheet/style.css">
 
-  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.3.min.js"></script>
-
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
