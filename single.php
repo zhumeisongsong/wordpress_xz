@@ -18,12 +18,6 @@
             </h1>
             <!-- /post title -->
 
-            <!-- post thumbnail -->
-              <?php if (has_post_thumbnail()) : // Check if Thumbnail exists ?>
-                  <?php the_post_thumbnail(); // Fullsize image for the single post ?>
-              <?php endif; ?>
-            <!-- /post thumbnail -->
-
             <!-- post details -->
             <span class="date"><?php the_time('Y-j-m'); ?></span>
             <!-- /post details -->
