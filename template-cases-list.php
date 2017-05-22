@@ -107,7 +107,6 @@ get_header(); ?>
 
 <?php $type = $_GET[type];
 if ($type != 'productions') {
-    echo $type;
     ?>
   <script>
       $(function ($) {
@@ -119,7 +118,5 @@ if ($type != 'productions') {
       }(jQuery));
   </script>
     <?php
-} else {
-    echo $$type, 'false';
 }
 ?>

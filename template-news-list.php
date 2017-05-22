@@ -14,10 +14,10 @@ get_header(); ?>
 
       <!-- Nav tabs -->
       <ul class="nav nav-tabs nav-stacked col-xs-3" role="tablist">
-        <li role="presentation" class="active">
+        <li role="presentation" class="active news">
           <a href="#news" aria-controls="home" role="tab" data-toggle="tab">新闻中心</a>
         </li>
-        <li role="presentation">
+        <li role="presentation" class="notices">
           <a href="#notices" aria-controls="profile" role="tab" data-toggle="tab">公示公告</a>
         </li>
       </ul>
@@ -89,4 +89,20 @@ get_header(); ?>
       </div>
     </section>
   </main>
-<?php get_footer(); ?>
+<?php get_footer();?>
+
+<?php $type = $_GET[type];
+if ($type == 'notices') {
+    ?>
+  <script>
+      $(function ($) {
+          $('.news').removeClass('active');
+          $('.notices').addClass('active');
+
+          $('#news').removeClass('active');
+          $('#notices').addClass('active');
+      }(jQuery));
+  </script>
+    <?php
+}
+?>
