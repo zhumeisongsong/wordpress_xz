@@ -213,6 +213,8 @@ index
   color: #fff;
   text-align: center; }
 .production-con .text-con .excerpt-text {
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
   padding-left: 10px;
   color: #fff;
   opacity: 0.6;

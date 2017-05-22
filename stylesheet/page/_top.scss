@@ -87,9 +87,6 @@ index
 .production-con {
   .item-con {
     margin-bottom: 15px;
-    &:hover{
-
-    }
   }
   .item-cell {
     padding: 20px 0 30px 0;
@@ -112,6 +109,8 @@ index
       text-align: center;
     }
     .excerpt-text {
+      line-clamp:1;
+      -webkit-line-clamp:1;
       padding-left: 10px;
       color: #fff;
       opacity: 0.6;

@@ -38,7 +38,7 @@
             <span class="border-bottom">新闻动态<span>news</span></span>
           </h4>
           <div class="a-btn col-xs-3 no-padding-r">
-            <a href="<?php echo home_url(); ?>/index.php/news">更多>></a>
+            <a href="<?php echo home_url(); ?>/index.php/news_list">更多>></a>
           </div>
         </header>
 
@@ -84,7 +84,7 @@
           </h4>
 
           <div class="a-btn col-xs-3 no-padding-r">
-            <a href="<?php echo home_url(); ?>/index.php/news?type==notices">更多>></a>
+            <a href="<?php echo home_url(); ?>/index.php/news_list?type==notices">更多>></a>
           </div>
         </header>
 
@@ -122,7 +122,7 @@
       </h4>
 
       <div class="a-btn col-xs-3 no-padding-r">
-        <a href="<?php echo home_url(); ?>/index.php/cases?type=productions">更多>></a>
+        <a href="<?php echo home_url(); ?>/index.php/cases_list?type=productions">更多>></a>
       </div>
     </header>
 

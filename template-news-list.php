@@ -26,7 +26,7 @@ get_header(); ?>
       <div class="tab-content col-xs-9 no-padding-r">
         <ol class="breadcrumb"> 
           <li>您的位置：<a href="<?php echo home_url(); ?>">首页</a></li>
-          <li><a href="<?php echo home_url(); ?>/news">资讯中心</a></li>
+          <li><a href="<?php echo home_url(); ?>/news_list/">资讯中心</a></li>
         </ol>
 
         <div role="tabpanel" class="tab-pane active" id="news">

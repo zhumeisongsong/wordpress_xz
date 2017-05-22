@@ -24,7 +24,7 @@ get_header(); ?>
 
       <ol class="breadcrumb"> 
         <li>您的位置：<a href="<?php echo home_url(); ?>">首页</a></li>
-        <li><a href="<?php echo home_url(); ?>/cases">产品与案例</a></li>
+        <li><a href="<?php echo home_url(); ?>/cases_list/">产品与案例</a></li>
       </ol>
 
       <div role="tabpanel" class="tab-pane production-tab-pane active" id="productions">
