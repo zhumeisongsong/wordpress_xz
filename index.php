@@ -17,14 +17,15 @@
               ?>
             <div class="swiper-slide">
                 <?php the_post_thumbnail(); ?>
+              <div class="swiper-text"><?php the_title(); ?></div>
             </div>
               <?php
           endwhile;
           wp_reset_query();
           ?>
 
-        <div class="swiper-pagination"></div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
@@ -247,7 +248,7 @@
 
   <!--code-->
   <section class="container-fluid code-con">
-    <div class="row">
+    <div class="row no-margin-lr">
       <div class="col-xs-12 img-con">
         <p>立即扫码关注微信公众号</p>
         <img src="<?php echo get_template_directory_uri(); ?>/img/code.jpg" alt="code">

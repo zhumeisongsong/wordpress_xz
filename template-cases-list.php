@@ -77,7 +77,7 @@ get_header(); ?>
                   $loop_cases->the_post();
                   ?>
                 <a href="<?php the_permalink() ?>" class="col-xs-12 item-cell"> 
-                  <div class="col-xs-12 col-sm-4 img-con no-padding">
+                  <div class="col-xs-4 img-con no-padding">
                       <?php
                       if (has_post_thumbnail()) { ?>
                           <?php the_post_thumbnail(); ?>
@@ -85,7 +85,7 @@ get_header(); ?>
                         <img src="<?php echo get_template_directory_uri(); ?>/img/cover.jpg" alt="cover">
                       <?php } ?>
                   </div>
-                  <div class="col-xs-12 col-sm-8 no-padding text-con">
+                  <div class="col-xs-8 no-padding text-con">
                     <div class="title-text"><?php the_title(); ?> </div>
                     <div class="excerpt-text"><?php the_excerpt(); ?></div>
                   </div>

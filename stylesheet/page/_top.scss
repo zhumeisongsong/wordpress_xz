@@ -29,17 +29,17 @@ index
 
 .swiper-container {
   width: 100%;
-  height: 30vw;
+  height: 50vw;
   overflow: hidden;
-  background:#003366;
-  background:-moz-linear-gradient(45deg,#003366 0,#00CCFF 100%);
-  background:-webkit-gradient(linear,left bottom,right top,color-stop(0%,#003366),color-stop(100%,#00CCFF));
-  background:-webkit-linear-gradient(45deg,#003366 0,#00CCFF 100%);
-  background:-o-linear-gradient(45deg,#003366 0,#00CCFF 100%);
-  background:-ms-linear-gradient(45deg,#003366 0,#00CCFF 100%);
-  background:linear-gradient(45deg,#003366 0,#00CCFF 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#003366', endColorstr='#00CCFF', GradientType=1);
-  -webkit-box-shadow:inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+  background: #003366;
+  background: -moz-linear-gradient(45deg, #003366 0, #00CCFF 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #003366), color-stop(100%, #00CCFF));
+  background: -webkit-linear-gradient(45deg, #003366 0, #00CCFF 100%);
+  background: -o-linear-gradient(45deg, #003366 0, #00CCFF 100%);
+  background: -ms-linear-gradient(45deg, #003366 0, #00CCFF 100%);
+  background: linear-gradient(45deg, #003366 0, #00CCFF 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003366', endColorstr='#00CCFF', GradientType=1);
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
   .swiper-wrapper {
     width: 100%;
     height: 100%;
@@ -56,6 +56,10 @@ index
         background-color: rgba(0, 0, 0, 0.2);
       }
     }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    opacity: 0.8;
   }
 }
 
@@ -90,9 +94,9 @@ index
   }
   .item-cell {
     padding: 20px 0 30px 0;
-    background-color: map-get($global-color,h);
-    &:hover{
-      background-color:map-get($global-color,f);
+    background-color: map-get($global-color, h);
+    &:hover {
+      background-color: map-get($global-color, f);
 
     }
   }
@@ -109,8 +113,8 @@ index
       text-align: center;
     }
     .excerpt-text {
-      line-clamp:1;
-      -webkit-line-clamp:1;
+      line-clamp: 1;
+      -webkit-line-clamp: 1;
       padding-left: 10px;
       color: #fff;
       opacity: 0.6;
@@ -218,6 +222,9 @@ index
       padding-bottom: 4px;
     }
   }
+  .swiper-container {
+    height: 30vw;
+  }
 
   .production-con {
     .item-con {
@@ -234,7 +241,7 @@ index
     .img-con {
       padding-top: 17%;
     }
-    .text-con{
+    .text-con {
       padding-left: 15px;
     }
 

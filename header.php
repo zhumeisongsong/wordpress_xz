@@ -19,7 +19,7 @@
 
 <nav class="nav-bar" role="navigation">
   <div class="container no-padding">
-    <div class="navbar-header no-margin-lr">
+    <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse"
               aria-expanded="false">
         <i class="fa fa-bars"></i>
@@ -33,7 +33,7 @@
     </div>
 
     <!--right navbar collapse-->
-    <div class="collapse navbar-collapse navbar-main-collapse navbar-right top-menu no-padding">
+    <div class="collapse navbar-collapse navbar-main-collapse navbar-right top-menu no-padding" id="navbar_collapse">
       <ul class="nav navbar-nav">
         <li class="active">
           <a href="<?php echo home_url(); ?>">首页</a>

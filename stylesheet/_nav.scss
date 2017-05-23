@@ -14,6 +14,7 @@
       background: none !important;
     }
   }
+
   button {
     i {
       color: #fff;
@@ -32,6 +33,27 @@
   .nav > li > a:focus,
   .nav > li > a:hover {
     color: map-get($global-color, a);
-    background-color:#fff;
+    background-color: #fff;
+  }
+}
+
+.navbar-header {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  background-color: map-get($global-color, a);
+}
+
+.top-menu {
+  background-color: map-get($global-color, a);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+@media (min-width: map-get($global-break, sm)) {
+  .navbar-header {
+    background-color: transparent;
+  }
+  .top-menu {
+    background-color: transparent;
   }
 }
