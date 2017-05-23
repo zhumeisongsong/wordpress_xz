@@ -1,5 +1,5 @@
 $global-color: (
-  a:#003366,
+  a:#036,
   b:#333,
   c:#999,
   d:#666,
@@ -34,7 +34,8 @@ body {
 main {
   width: 100%;
   min-height: 100%;
-  margin-bottom: -($footer-height)-1;
+  margin-bottom: -$footer-height;
+  padding-top: 50px;
   &:after {
     content: "";
     display: block;
@@ -83,4 +84,10 @@ a {
 .no-margin-lr {
   margin-left: 0;
   margin-right: 0;
+}
+
+@media (min-width: map-get($global-break, sm)) {
+  main {
+    padding-top: 0;
+  }
 }

@@ -13,7 +13,7 @@ get_header(); ?>
   <section class="list-con container">
 
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-stacked col-xs-3 hidden-xs" role="tablist">
+    <ul class="nav nav-tabs nav-stacked col-xs-3" role="tablist">
       <li role="presentation" class="active">
         <a href="#about_company" aria-controls="home" role="tab" data-toggle="tab">公司概况</a>
       </li>

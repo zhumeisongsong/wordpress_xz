@@ -9,7 +9,7 @@
   background: none;
   .navbar-brand {
     width: 9em;
-    padding-top: 0.5em;
+    padding-top:12px;
     &:hover {
       background: none !important;
     }
@@ -47,6 +47,12 @@
   background-color: map-get($global-color, a);
   box-shadow: none;
   -webkit-box-shadow: none;
+  border-top: 0;
+}
+
+.navbar-nav {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @media (min-width: map-get($global-break, sm)) {
